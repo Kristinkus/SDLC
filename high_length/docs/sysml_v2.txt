@@ -1,0 +1,18 @@
+package LengthConverter {
+  part def LengthModel;
+  part def MainView;
+  part def InputDialog;
+  part def LengthController;
+  part def LengthUnit;
+
+  part application {
+    part model : LengthModel;
+    part view : MainView;
+    part dialog : InputDialog;
+    part controller : LengthController;
+    connect view to controller;
+    connect controller to model;
+    connect model to view;
+    connect dialog to controller;
+  }
+}

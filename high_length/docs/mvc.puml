@@ -1,0 +1,74 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+package model {
+  enum LengthUnit {
+    INCH
+    YARD
+    CENTIMETER
+    METER
+    COCKROACH
+    GIRAFFE_NECK
+    LONGEST_SNAKE
+    HUMAN_TONGUE
+    FOOTBALL_FIELD
+  }
+
+  interface ModelListener {
+    + onModelChanged()
+  }
+
+  class LengthModel {
+    - inputValue : double
+    - fromUnit : LengthUnit
+    - toUnit : LengthUnit
+    - resultValue : double
+    + addListener(listener)
+    + setData(value, from, to)
+  }
+
+  LengthModel ..> LengthUnit
+  LengthModel o--> ModelListener
+}
+
+package view {
+  class MainView {
+    - controller : LengthController
+    - model : LengthModel
+    + onModelChanged()
+  }
+
+  class InputDialog {
+    - txtValue : JTextField
+    - cmbFrom : JComboBox
+    - cmbTo : JComboBox
+    + setValues(value, from, to)
+  }
+
+  MainView ..|> ModelListener
+}
+
+package controller {
+  class LengthController {
+    - model : LengthModel
+    - inputDialog : InputDialog
+    + openInputDialog(parent)
+    + processInput(valueStr, from, to)
+  }
+}
+
+class Main {
+  + main(args)
+}
+
+Main --> LengthModel
+Main --> LengthController
+Main --> MainView
+MainView --> LengthController
+MainView --> LengthModel
+InputDialog --> LengthController
+LengthController --> LengthModel
+LengthController --> InputDialog
+
+@enduml
