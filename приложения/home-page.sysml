@@ -1,6 +1,6 @@
-package Kladovaya_Home {
+package Receptus_Home {
     part def HomePage {
-        attribute title = "Кладовая";
+        attribute title = "Рецептус";
 
         part header : Header;
         part fridgeSummary : FridgeSummary;
@@ -11,7 +11,7 @@ package Kladovaya_Home {
     }
 
     part def Header {
-        attribute logo = "Кладовая";
+        attribute logo = "Рецептус";
     }
 
     part def FridgeSummary {

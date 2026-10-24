@@ -1,4 +1,4 @@
-package Kladovaya_ProductForm {
+package Receptus_ProductForm {
     part def ProductForm {
         attribute title = "Новый продукт";
 
