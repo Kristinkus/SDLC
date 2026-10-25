@@ -7,6 +7,7 @@ package Receptus_Home {
         part wasteAlert : WasteAlert;
         part recipeSuggestions : RecipeSuggestions;
         part productList : ProductList;
+        part search : SearchField;
         part addButton : AddProductButton;
     }
 
@@ -20,8 +21,9 @@ package Receptus_Home {
     }
 
     part def WasteAlert {
-        attribute soonList = "Продукты со сроком ≤ 3 дней";
+        attribute soonList = "Продукты со сроком ≤ 3 дней (только на экране)";
         attribute emptyText = "нет срочных списаний";
+        attribute noPopup = "Без всплывающих уведомлений ОС";
     }
 
     part def RecipeSuggestions {
@@ -31,8 +33,12 @@ package Receptus_Home {
     }
 
     part def ProductList {
-        attribute rows = "Название, количество, категория, срок годности";
+        attribute rows = "Название, категория, срок, вес (если указан)";
         attribute emptyText = "В холодильнике пока пусто";
+    }
+
+    part def SearchField {
+        attribute placeholder = "Поиск по вхождению слова";
     }
 
     part def AddProductButton {

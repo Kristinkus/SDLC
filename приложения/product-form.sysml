@@ -3,9 +3,9 @@ package Receptus_ProductForm {
         attribute title = "Новый продукт";
 
         part name : NameField;
-        part quantity : QuantityField;
         part category : CategoryField;
         part expiry : ExpiryField;
+        part weight : WeightField;
         part actions : FormActions;
         part validation : ValidationMessage;
     }
@@ -15,18 +15,21 @@ package Receptus_ProductForm {
         attribute required = "Обязательное";
     }
 
-    part def QuantityField {
-        attribute amount = "Количество > 0";
-        attribute units = "шт, г, кг, мл, л";
-    }
-
     part def CategoryField {
-        attribute values = "Молочное, овощи/фрукты, мясо/рыба, крупы/бакалея, прочее";
+        attribute values = "Категории пользователя (можно создать свою)";
+        attribute required = "Обязательное";
     }
 
     part def ExpiryField {
         attribute format = "ДД.ММ.ГГГГ";
         attribute rule = "Не раньше сегодняшней даты";
+        attribute required = "Обязательное";
+    }
+
+    part def WeightField {
+        attribute amount = "Вес необязателен";
+        attribute units = "Фиксированный список: шт, г, кг, мл, л";
+        attribute ifEmpty = "Для рецептов запас считается достаточным";
     }
 
     part def FormActions {
