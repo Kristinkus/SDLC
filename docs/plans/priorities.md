@@ -40,6 +40,7 @@
 | REQ-FUNC-004 | Edit and delete product | 1 |
 | REQ-FUNC-005 | Fridge summary and expiring products | 1 |
 | REQ-FUNC-006 | Recipe matching and ranking | 3 |
+| REQ-FUNC-007 | Data persistence | 1 |
 | REQ-FUNC-008 | Input validation | 0,5 |
 | REQ-FUNC-009 | Product search | 0,5 |
 | REQ-FUNC-010 | Custom categories | 1 |
