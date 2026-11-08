@@ -36,22 +36,22 @@
 
 ## Скорректированная оценка трудозатрат (после первого раунда)
 
-Таблица 3.4 – Скорректированная оценка трудозатрат после первого раунда обсуждения
+Таблица 3.4 – Оценка трудозатрат после первого раунда обсуждения
 
-| ID требования | Название функции | Было (недели) | Стало (недели) |
-|---|---|---|---|
-| REQ-FUNC-001 | Single fridge | 0,5 | 0,5 |
-| REQ-FUNC-002 | Add product | 1,5 | 1 |
-| REQ-FUNC-003 | Product list | 1 | 0,5 |
-| REQ-FUNC-004 | Edit and delete product | 1 | 0,5 |
-| REQ-FUNC-005 | Fridge summary and expiring products | 1 | 0,5 |
-| REQ-FUNC-006 | Recipe matching and ranking | 3 | 2,5 |
-| REQ-FUNC-007 | Data persistence | 1 | 0,5 |
-| REQ-FUNC-008 | Input validation | 0,5 | 0,5 |
-| REQ-FUNC-009 | Product search | 0,5 | 0,5 |
-| REQ-FUNC-010 | Custom categories | 1 | 0,5 |
-| REQ-FUNC-011 | Custom recipes | 2,5 | 1,5 |
-| **Итого** | | **13,5** | **9** |
+| ID требования | Название функции | Трудозатраты (недели) |
+|---|---|---|
+| REQ-FUNC-001 | Single fridge | 0,5 |
+| REQ-FUNC-002 | Add product | 1 |
+| REQ-FUNC-003 | Product list | 0,5 |
+| REQ-FUNC-004 | Edit and delete product | 0,5 |
+| REQ-FUNC-005 | Fridge summary and expiring products | 0,5 |
+| REQ-FUNC-006 | Recipe matching and ranking | 2,5 |
+| REQ-FUNC-007 | Data persistence | 0,5 |
+| REQ-FUNC-008 | Input validation | 0,5 |
+| REQ-FUNC-009 | Product search | 0,5 |
+| REQ-FUNC-010 | Custom categories | 0,5 |
+| REQ-FUNC-011 | Custom recipes | 1,5 |
+| **Итого** | | **9** |
 
 Каркас экранов (REQ-INT-001, REQ-INT-002) сокращён с 1 до 0,5 недели, так как экраны уже согласованы диаграммами SysML; проверка производительности и сборка (REQ-PERF-001) остаются 0,5 недели. С учётом этих работ общий объём — 10 недель вместо 15. За счёт чего сократилась каждая оценка — журнал CH-03…CH-11 в `priorities.md`.
 
